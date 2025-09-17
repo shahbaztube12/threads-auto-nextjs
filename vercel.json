@@ -1,0 +1,12 @@
+{
+  "crons": [
+    {
+      "path": "/api/jobs/process-replies",
+      "schedule": "0 9 * * *"
+    },
+    {
+      "path": "/api/jobs/cleanup",
+      "schedule": "0 2 * * *"
+    }
+  ]
+}
