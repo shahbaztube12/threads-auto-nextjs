@@ -1,14 +1,22 @@
-# TODO: Fix Supabase Edge Runtime Error for Vercel Deployment
+# TODO: Fix Supabase Client Errors
 
-## Tasks
-- [x] Add `export const runtime = "nodejs";` to `lib/supabase/middleware.ts` to force Node.js runtime for middleware using Supabase server client.
-- [x] Check and update any API routes using Supabase server client with `export const runtime = "nodejs";`.
-- [x] Verify that browser client (`lib/supabase/client.ts`) remains unchanged for client-side usage.
-- [ ] Redeploy to Vercel to test the fix.
-- [ ] Confirm the app works at http://threads-1yod.vercel.app/
+## Completed
+- [x] Added validation checks in lib/supabase/client.ts to throw descriptive error if NEXT_PUBLIC_SUPABASE_URL or NEXT_PUBLIC_SUPABASE_ANON_KEY are missing
+- [x] Added validation checks in lib/supabase/server.ts to throw descriptive error if NEXT_PUBLIC_SUPABASE_URL or NEXT_PUBLIC_SUPABASE_ANON_KEY are missing
 
-## Notes
-- The error occurs because Supabase packages use Node.js APIs (e.g., `process.versions`) not supported in Edge Runtime.
-- Middleware runs in Edge Runtime by default in Next.js 14+.
-- Adding `export const runtime = "nodejs";` forces the route/middleware to use Node.js runtime.
-- Browser client (`createBrowserClient`) is fine for client-side as it doesn't use Node.js APIs.
+## Pending
+- [ ] Set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY in Vercel environment variables
+- [ ] Redeploy the application on Vercel
+- [ ] Test the application to ensure Supabase client works without errors
+
+## Environment Variables to Set in Vercel
+- NEXT_PUBLIC_SUPABASE_URL=https://npkorgwyqnuywmzbeynu.supabase.co
+- NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5wa29yZ3d5cW51eXdtemJleW51Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc4NzYzMzAsImV4cCI6MjA3MzQ1MjMzMH0.jhQHn8YzJwxkGY75dvN4ulPLvZn4zJJHGFgdEVuT5Fc
+
+## Additional Variables (if needed)
+- THREADS_CLIENT_ID=770377962267079
+- THREADS_CLIENT_SECRET=8d9c70ee09a19a12d89ec05615e56dd1
+- NEXT_PUBLIC_APP_URL=https://threads-1yod.vercel.app/
+- FACEBOOK_CLIENT_ID=770377962267079
+- FACEBOOK_CLIENT_SECRET=8d9c70ee09a19a12d89ec05615e56dd1
+- NEXTAUTH_SECRET=your_nextauth_secret_here
