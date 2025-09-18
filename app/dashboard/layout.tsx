@@ -1,7 +1,7 @@
 import type React from "react"
 import { createClient } from "@/lib/supabase/server"
 import { redirect } from "next/navigation"
-import { DashboardSidebar } from "@/components/dashboard/sidebar"
+import { DashboardSidebar } from "@/app/components/dashboard/sidebar"
 
 export default async function DashboardLayout({
   children,

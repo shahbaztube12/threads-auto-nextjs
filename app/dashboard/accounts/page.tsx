@@ -1,8 +1,8 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { DashboardHeader } from "@/components/dashboard/header"
-import { ThreadsAccountCard } from "@/components/dashboard/threads-account-card"
+import { DashboardHeader } from "@/app/components/dashboard/header"
+import { ThreadsAccountCard } from "@/app/components/dashboard/threads-account-card"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Plus } from "lucide-react"
