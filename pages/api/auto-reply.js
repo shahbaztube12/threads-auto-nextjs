@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 export default function handler(req, res) {
   if (req.method === 'POST') {
     const { keyword, reply } = req.body;
