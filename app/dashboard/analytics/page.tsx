@@ -1,6 +1,6 @@
-import { DashboardHeader } from "@/components/dashboard/header"
-import { AnalyticsChart } from "@/components/dashboard/analytics-chart"
-import { StatsCard } from "@/components/dashboard/stats-card"
+import { DashboardHeader } from "@/app/components/dashboard/header"
+import { AnalyticsChart } from "@/app/components/dashboard/analytics-chart"
+import { StatsCard } from "@/app/components/dashboard/stats-card"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
