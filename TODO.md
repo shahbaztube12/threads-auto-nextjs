@@ -1,5 +1,3 @@
 - [x] Update contact email in privacy page to racksmartseo@gmail.com
 - [x] Update contact email in terms page to racksmartseo@gmail.com
 - [x] Add footer to home page with links to privacy and terms
-- [x] Fix Edge Runtime warnings in middleware by setting Node.js runtime
-- [x] Remove obsolete threads-auto-reply.zip file from repository
